@@ -1,0 +1,584 @@
+.container {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  width: 100%;
+  height: 100px;
+  border-top: 1px solid #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer img {
+  margin-left: 0.5rem;
+}
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.description {
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.code {
+  background: #fafafa;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin-top: 3rem;
+}
+
+.card {
+  margin: 1rem;
+  flex-basis: 45%;
+  padding: 1.5rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
+.card h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.logo {
+  height: 1em;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+.verticalDiv {
+  transform: rotate(90deg);
+  transform-origin: left top 0;
+
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.verticalText {
+  transform: rotate(90deg);
+  transform-origin: left top 0;
+  
+  font-weight: 100;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.cursorDiv {
+  width: 100%;
+  height: 100%;
+
+  z-index: 998;
+  user-select: none;
+  position: fixed;
+
+  pointer-events: none;
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+
+  padding: 3rem;
+
+  min-height: 100vh;
+  height: 100vh;
+
+  display: flex;
+  
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  background-color: white;
+
+  animation: fadeToWhite 2s ease;
+}
+
+@keyframes fadeToWhite {
+  0% {
+    background-color: black;
+  }
+  100% {
+    background-color: white;
+  }
+}
+
+.splitAq {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+/* 
+  position: fixed; */
+
+  flex: 0 1 auto;
+  justify-content: space-between;
+
+  z-index: 900;
+}
+
+.splitAq * {
+  white-space: nowrap;
+}
+
+.link {
+  opacity: .35;
+  font-weight: 400;
+}
+
+.hNo {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  width: 100%;
+
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.hNoOver {
+  font-family: continuo, sans-serif;
+  font-family: basic-sans, sans-serif;
+
+  height: 1rem;
+  max-height: 1rem;
+
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  width: fit-content;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  transform: translate3d(0px, -50%, 0px);
+  text-align: center;
+}
+
+.bar {
+  border-radius: 3px;
+  width: 5vw;
+
+  background-color: white;
+  height: 1px;
+
+  transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) .55s all;
+}
+
+.hNoOver:before {
+  z-index: 990;
+  content: "01";
+  position: relative;
+
+  float: right;
+  
+  top: 100%;
+  left: 0;
+
+  line-height: 1.20833vw;
+  font-family: basic-sans, sans-serif;
+  font-size: 1rem;
+
+  transform: translate3d(0%, 0%, 0%);
+}
+
+.hNoOver:after {
+  z-index: 990;
+  content: "Explore";
+  position: relative;
+
+  float: right;
+  
+  top: 100%;
+  left: 0;
+
+  line-height: 1.20833vw;
+  font-family: basic-sans, sans-serif;
+  font-size: 0.91667vw;
+
+  transform: translate3d(0%, 0%, 0%);
+}
+
+/* div.active + div {
+  display: block !important;
+  opacity: 0.2;
+} */
+
+.hNoOver {
+  line-height: 1.20833vw;
+  transition: -webkit-transform .8s cubic-bezier(.19,1,.22,1);
+  transition: transform .8s cubic-bezier(.19,1,.22,1);
+  transition: transform .8s cubic-bezier(.19,1,.22,1),-webkit-transform .8s cubic-bezier(.19,1,.22,1);
+}
+
+.aboutDiv h4 {
+  font-weight: 100;
+  font-size: 1.15rem;
+  margin: 0;
+}
+
+.aboutDiv h3 {
+  font-size: .9rem;
+  margin: 0;
+}
+
+.aboutDiv {
+  opacity: .35;
+
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-name: FlickerOff;
+  animation-duration: .55s;
+}
+
+.aboutDiv:hover {
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-name: Flicker;
+  animation-duration: .55s;
+
+  opacity: 1;
+}
+
+div.active:hover .hNoOver {
+  transform: translate3d(0px, -150%, 0px);
+}
+
+div.active:hover .bar {
+  width: 7vw;
+}
+
+div.active:hover {
+  cursor: pointer;
+}
+
+
+.scrollBarCasing {
+  height: 100%;
+  width: 3px;
+  border-radius: 55px;
+
+  background-color: rgba(0,0,0, .1);
+  overflow: hidden;
+
+  transition: ease .55s all;
+}
+
+.scrollBar {
+  height: 50%;
+  background-color: rgba(0,0,0, 1);
+  border-radius: 55px;
+
+  transition: ease .35s all;
+}
+
+@keyframes Flicker {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: .5;
+  }
+
+  15% {
+    opacity: .35;
+  }
+
+  40% {
+    opacity: .2;
+  }
+
+  50% {
+    opacity: .6
+  }
+
+  60% {
+    opacity: 1
+  }
+/* 
+  65% {
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: .35;
+  }
+
+  95% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1
+  } */
+}
+
+@keyframes FlickerOff {
+  0% {
+    opacity: .80;
+  }
+
+  10% {
+    opacity: .70;
+  }
+
+  15% {
+    opacity: .60;
+  }
+
+  40% {
+    opacity: .50;
+  }
+
+  50% {
+    opacity: .40;
+  }
+
+  60% {
+    opacity: .35;
+  }
+}
+
+.caseHead {
+  display: block;
+}
+
+.caseStudy {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.caseStudy > div:first-of-type {
+  padding: 5rem;
+  width: 100%;
+
+  background-color: black;
+  color: white;
+
+  position: relative;
+}
+
+.caseStudy > div:first-of-type > div {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+
+  background-color: white;
+  color: black;
+
+  display: flex;
+  flex-direction: row;
+  
+  align-items: center;
+  justify-content: center;
+
+  height: 35px;
+  width: 35px;
+
+  font-size: 1.25rem;
+
+  font-weight: 400;
+  font-family: continuo;
+
+  border-radius: 50%;
+}
+
+.caseStudy h1 {
+  font-family: basic-sans, sans-serif;
+  font-family: continuo, sans-serif;
+  font-size: 6rem;
+
+  padding: 0;
+
+  margin: 0;
+}
+
+.caseStudy h2 {
+  font-family: basic-sans, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.caseStudy h3 {
+  font-size: 1.5rem;
+}
+
+.caseStudy p {
+  text-align: justify;
+}
+
+.caseContent {
+  width: 80%;
+  padding: 3rem;
+}
+
+.rotatingCycle:has(div.active + div) {
+  display: block !important;
+  opacity: 0.2;
+}
+
+.rotatingCycle > div.active {
+  transition: .55s ease all;
+  opacity: 1 !important;
+
+  background-color: black;
+  color: white;
+}
+
+.rotatingCycle > div.active:hover {
+  box-shadow: -5px 5px 0px;
+}
+
+.rotatingCycle > div {
+  padding: 3rem;
+  border: 1px solid black;
+
+  position: relative;
+
+  max-width: 60%;
+  opacity: .35;
+
+  min-width: 60%;
+}
+
+.rotatingCycle > div:before {
+  content: "01";
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  color: rgba(255,255,255, .15);
+  margin: 0;
+
+  font-size: 15em;
+
+  font-family: basic-sans, sans-serif;
+}
+
+.rotatingCycle {
+  padding-top: 18%;
+  padding-bottom: 18%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  overflow: scroll;
+
+  gap: 10rem;
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 100%;
+  width: 100%;
+
+  z-index: 1;
+}
+
+.rotatingCycle::-webkit-scrollbar {
+  display: none;
+}
+
+/* .rotatingCycle > div:not(.active) {
+  display: none;
+} */
+
+.fixedHeader {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 25px;
+}
